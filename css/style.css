@@ -72,8 +72,7 @@ body { scroll-behavior: smooth; }
 a, label, button { cursor: pointer; user-select: none; color: inherit; }
 a, a:hover { text-decoration: none; color: inherit; }
 p { word-break: keep-all; line-height: 1.7em; }
-.container { max-width: 1140px; margin: 0 auto; position: relative; }
-.container-xl { max-width: 1680px; margin: 0 auto; position: relative; }
+.container { max-width: 1440px; margin: 0 auto; position: relative; padding: 0 20px; }
 .container-fluid { max-width: 100%; margin: 0 auto; position: relative; }
 ::-webkit-scrollbar { display: none; }
 
@@ -179,15 +178,20 @@ p { word-break: keep-all; line-height: 1.7em; }
 }
 
 
+#main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 300px;
+}
+
 /* 사이드바
 */
 #aside-wrap {
     position: absolute;
-    right: 50%;
+    left: 0;
     top: 0;
     width: 300px;
     height: 100%;
-    transform: translateX(calc(1140px / -2));
     z-index: 100;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -310,7 +314,7 @@ p { word-break: keep-all; line-height: 1.7em; }
     100.00% { opacity: 0; transform: translateX(100%); }
 }
 
-#visual .text { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff; width: 70%; }
+#visual .text { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff; width: 50%; }
 #visual .text h4 { font-family: "Segoe UI", sans-serif; font-weight: 100; font-size: 1.5em; line-height: 1em; margin-bottom: 0.2em; }
 #visual .text h1 .black { font-weight: 900; }
 #visual .text h1 { font-family: "Segoe UI", sans-serif; font-weight: 100; font-size: 2.5em; line-height: 1em; }
@@ -389,6 +393,7 @@ p { word-break: keep-all; line-height: 1.7em; }
 */
 
 @media(max-width: 780px) {
+    .container { padding: 0 0; }
     .text-sm-right { text-align: right; }
     .text-sm-center { text-align: center; }
 
@@ -445,7 +450,7 @@ p { word-break: keep-all; line-height: 1.7em; }
     #header .search { border-radius: 0!important; }
     #header .search-bar { border-radius: 20px; }
 
-    #main { margin-top: 80px!important; font-size: 14px; }
+    #main { margin-top: 80px!important; font-size: 14px; padding-left: 0; }
 
     /* Aside
     */
